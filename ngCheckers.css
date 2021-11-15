@@ -1,0 +1,72 @@
+/* ------------------------------------------------------------------------------------------ */
+/*                                 Design of the Checkerboard                                 */
+/* ------------------------------------------------------------------------------------------ */
+
+body {
+    background-image: url("https://images.unsplash.com/photo-1571647520939-45c81309ba91?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fHRhYmxldG9wfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
+    background-position: center;
+    background-size: cover;
+}
+
+#godContainer {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#gameContainer {
+    background-color: black;
+    width: min(450px, 100%);
+    padding: 20px;
+    aspect-ratio: 1;
+}
+
+#players {
+    margin-top: 1%;
+    background-color: aliceblue;
+    opacity: 0.5;
+}
+
+/* Use all 480pxs of the row */
+.row {
+    width: 100%
+}
+
+/* When squares are generated, they are floating to their left */
+.square {
+    float: left;
+    width: 12.5%;
+    aspect-ratio: 1;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 94%;
+    height: 94%;
+    margin: 3%;
+    color: black;
+    text-align: center;
+    line-height: 56px;
+}
+
+/* When the mouse is hovering the square, it changes */
+.square:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+#startGame {
+    width: 120px;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+#startGame:hover {
+    color: red;
+    cursor: pointer;
+}
