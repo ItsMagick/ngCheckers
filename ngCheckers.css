@@ -1,32 +1,11 @@
 /* ------------------------------------------------------------------------------------------ */
 /*                                 Design of the Checkerboard                                 */
 /* ------------------------------------------------------------------------------------------ */
-
-body {
-    background-image: url("https://images.unsplash.com/photo-1571647520939-45c81309ba91?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fHRhYmxldG9wfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
-    background-position: center;
-    background-size: cover;
-}
-
-#godContainer {
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
 #gameContainer {
     background-color: black;
-    width: min(450px, 100%);
+    width: 480px;
+    height: 480px;
     padding: 20px;
-    aspect-ratio: 1;
-}
-
-#players {
-    margin-top: 1%;
-    background-color: aliceblue;
-    opacity: 0.5;
 }
 
 /* Use all 480pxs of the row */
@@ -37,8 +16,8 @@ body {
 /* When squares are generated, they are floating to their left */
 .square {
     float: left;
-    width: 12.5%;
-    aspect-ratio: 1;
+    width: 60px;
+    height: 60px;
 }
 
 .circle {
@@ -69,4 +48,23 @@ body {
 #startGame:hover {
     color: red;
     cursor: pointer;
+}
+
+.container{
+  width: 95%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: 0.3rem;
 }
