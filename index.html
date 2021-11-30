@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="ngCheckers.css">
 </head>
 <body ng-controller="checkersCtrl">
-    <div class="jumbotron text-center">Hello</div>
+    <div class="jumbotron text-center"><h1>Angular Checkers</h1></div>
 <div id="gameContainer" class="container"> 
   <!-- ng-repeat is a looping structure -->
   <div class="row" ng-repeat="row in board"> 
@@ -17,14 +17,18 @@
     </div>
   </div>
 </div>
-<div class="container text-center">
+    <br>
+<div class="container text-center alert">
   <div>
-    <h1>Player : {{player}}</h1>
+    <h2>Player : {{player}}</h2>
   </div>
   <div>Red Score : {{redScore}}</div>
   <div>Black Score : {{blackScore}}</div>
 </div>
 <script src="angular.min.js"></script> 
 <script src="ngCheckers.js"></script>
+    <footer>  <div class="text-center p-2">
+    <h3>© 2021 Copyright: FA 21 IST 256</h3>
+  </div></footer>
 </body>
 </html>
