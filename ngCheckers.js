@@ -122,6 +122,7 @@ angular.module("ngCheckers", [])
                 var matado = square.matados[i];
                 hopPiece(matado);
                 //becomeKing = becomeKing || becomeKingAfterJump(matado.x, matado.y);
+			
             }
         square.player = selectedSquare.player;
         square.isKing = becomeKing || isKing(square);
@@ -153,8 +154,10 @@ angular.module("ngCheckers", [])
       }
         // If the BLACK player takes a RED chip
       else {
-        $scope.blackScore++;    // Add to Black's score
+        $scope.blackScore++;  // Add to Black's score
       }
+		gameOver();
+		
     }
 
     
@@ -293,4 +296,19 @@ angular.module("ngCheckers", [])
         }
 //      |-----------------------------------------------------------------------------------------------------------|
     }
+	
+	function gameOver(){
+		if($scope.redScore == 12)
+			{
+				alert("RED WINS!!");
+				$scope.newGame();
+			}
+		else if($scope.blackScore == 12)
+			{
+				alert("BLACK WINS!!");
+				$scope.newGame();
+			}
+		
+		
+	}
   });
