@@ -122,6 +122,7 @@ angular.module("ngCheckers", [])
                 var matado = square.matados[i];
                 hopPiece(matado);
                 //becomeKing = becomeKing || becomeKingAfterJump(matado.x, matado.y);
+			
             }
         square.player = selectedSquare.player;
         square.isKing = becomeKing || isKing(square);
@@ -163,6 +164,10 @@ angular.module("ngCheckers", [])
         $scope.blackScore++;  // Add to Black's score
       }
 		gameOver();
+<<<<<<< HEAD
+=======
+		
+>>>>>>> origin/main
     }
 
     
