@@ -125,6 +125,13 @@ angular.module("ngCheckers", [])
             }
         square.player = selectedSquare.player;
         square.isKing = becomeKing || isKing(square);
+            
+        if ($scope.player === RED){
+            alert("The Red player has a king chip!")
+        }
+        else if ($scope.player === BLACK){
+            alert("The Black player has a king chip!")
+        }
         
         selectedSquare.player = null;
         selectedSquare.isKing = false;
@@ -133,7 +140,7 @@ angular.module("ngCheckers", [])
         $scope.player = $scope.player === RED ? BLACK : RED;
         }
     }
-    
+
     function resetChoices() {
         // Un-highlights everything
         // Constructed to iterate through the entire game board
@@ -153,13 +160,15 @@ angular.module("ngCheckers", [])
       }
         // If the BLACK player takes a RED chip
       else {
-        $scope.blackScore++;    // Add to Black's score
+        $scope.blackScore++;  // Add to Black's score
       }
+		gameOver();
     }
 
     
     function isKing(square) {
         if ($scope.player === RED){
+            square.player.backgroundColor = "yellow";
             if (square.y === 0)
                 return true;
         }
@@ -287,10 +296,26 @@ angular.module("ngCheckers", [])
                     }
                 }
                 else if (depth === 1){
+
                     DOWN_RIGHT.isChoice = true;
                 }
             }
         }
 //      |-----------------------------------------------------------------------------------------------------------|
     }
+	
+	function gameOver(){
+		if($scope.redScore == 12)
+			{
+				alert("RED WINS!!");
+				$scope.newGame();
+			}
+		else if($scope.blackScore == 12)
+			{
+				alert("BLACK WINS!!");
+				$scope.newGame();
+			}
+		
+		
+	}
   });

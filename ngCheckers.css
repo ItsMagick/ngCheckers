@@ -8,6 +8,9 @@
     padding: 20px;
 }
 
+*{
+font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', 'serif';
+}
 /* Use all 480pxs of the row */
 .row {
     width: 100%
@@ -122,7 +125,7 @@ background-color: #4b4956;
   line-height: 1.5;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-color: #fff;
+    color: #fff;
   background-color: #cc192f;
   border-color: #cc192f;
   width: 100%;
