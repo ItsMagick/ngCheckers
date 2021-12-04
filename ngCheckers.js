@@ -53,12 +53,17 @@ angular.module("ngCheckers", [])
     $scope.newGame();
 
     $scope.setStyling = function (square) {
+        var pawnRED = "#FF0000",
+            pawnBLACK = "#4b4956",
+            kingRED = "#Ff7979",
+            kingBLACK = "#837f96";
         // Red checker pieces
       if (square.player === RED)
-        return {"backgroundColor": "#FF0000"};
+          // If the chip became king, it will change to a different color.
+        return {"backgroundColor": square.isKing ? kingRED : pawnRED};
         // Black checker pieces
       else if (square.player === BLACK)
-        return {"backgroundColor": "#4b4956"};
+        return {"backgroundColor": square.isKing ? kingBLACK : pawnBLACK};
       else
         return {"backgroundColor": "none"};
     }
@@ -126,13 +131,6 @@ angular.module("ngCheckers", [])
             }
         square.player = selectedSquare.player;
         square.isKing = becomeKing || isKing(square);
-            
-        if ($scope.player === RED){
-            alert("The Red player has a king chip!")
-        }
-        else if ($scope.player === BLACK){
-            alert("The Black player has a king chip!")
-        }
         
         selectedSquare.player = null;
         selectedSquare.isKing = false;
@@ -164,16 +162,11 @@ angular.module("ngCheckers", [])
         $scope.blackScore++;  // Add to Black's score
       }
 		gameOver();
-<<<<<<< HEAD
-=======
-		
->>>>>>> origin/main
     }
 
     
     function isKing(square) {
         if ($scope.player === RED){
-            square.player.backgroundColor = "yellow";
             if (square.y === 0)
                 return true;
         }
@@ -310,17 +303,17 @@ angular.module("ngCheckers", [])
     }
 	
 	function gameOver(){
+        // Game is over when one of the players has gotten 12 points
+        // They are only 12 pieces for each player
 		if($scope.redScore == 12)
 			{
-				alert("RED WINS!!");
+				alert("RED PLAYER WINS!!");
 				$scope.newGame();
 			}
 		else if($scope.blackScore == 12)
 			{
-				alert("BLACK WINS!!");
+				alert("BLACK PLAYER WINS!!");
 				$scope.newGame();
 			}
-		
-		
 	}
   });
