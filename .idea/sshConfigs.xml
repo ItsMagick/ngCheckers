@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="jh-webdev1.netlab.hof-university.de" id="76a68526-0519-4b64-b0e0-20651e5f5618" port="22" customName="webdev" nameFormat="CUSTOM" username="speschke">
+        <option name="customName" value="webdev" />
+      </sshConfig>
+    </configs>
+  </component>
+</project>

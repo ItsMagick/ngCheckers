@@ -10,7 +10,9 @@ angular.module("ngCheckers", [])
     var RED = "Red",
       BLACK = "Black",
       BOARD_WIDTH = 8,
-      selectedSquare = null;
+      selectedSquare = null,
+        interval = null,
+        timeSec = null;
 
     // Setters of the checker pieces
     // Piece() will only be activated when being called in the scope functions
@@ -102,6 +104,10 @@ angular.module("ngCheckers", [])
 
     // When a square is being clicked
     $scope.select = function(square) {
+        if(timeSec == 0){
+            startTimer();
+        }
+
         // Check if the clicked square does have a chip AND it is your turn
         if (selectedSquare !== null && !square.player){
             movePiece(square);       // Move the piece to any of the designated highlighted areas
@@ -301,6 +307,16 @@ angular.module("ngCheckers", [])
         }
 //      |-----------------------------------------------------------------------------------------------------------|
     }
+      function startTimer(){
+          interval = setInterval(function (){
+              $scope.$apply(function(){
+                  timeSec += 1;
+                  $scope.hours = correctInt(parseInt(timeSec / 3600, 10));
+                  $scope.minutes = correctInt(parseInt(timeSec % 3600 / 60, 10));
+                  $scope.seconds = correctInt(parseInt(timeSec % 60, 10));
+              })
+          }, 1000);
+      }
 	
 	function gameOver(){
         // Game is over when one of the players has gotten 12 points
