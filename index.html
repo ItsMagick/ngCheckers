@@ -1,15 +1,52 @@
 <!doctype html>
-<html ng-app="ngCheckers">
+<html lang="en" ng-app="ngCheckers">
 <head>
     <meta charset="UTF-8">
     <title>Checkers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="ngCheckers.css">
 </head>
 <body ng-controller="checkersCtrl">
-    <div class="jumbotron text-center">
-        <h1>Angular Checkers</h1>
-    </div>
-    <div id="gameContainer" class="container">
+<header class="container jumbotron text-center">
+    <h1>Dame - das Spiel</h1>
+</header>
+<nav class="container">
+    <form class="registration">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Username">
+        <!--<br/>
+        <label for="password">Password:</label>
+        <input type="text" id="password" name="password" placeholder="Password">-->
+        <input type="submit" value="Submit">
+    </form>
+</nav>
+<section class="container">
+    <aside class="left container">
+        <dl class="highscore">
+            <dt>Place</dt>
+            <dd class="place">
+                <ul>
+                    <li>1.</li>
+                    <li>2.</li>
+                    <li>3.</li>
+                    <li><!-- place corresponding to user --></li>
+                </ul>
+            </dd>
+            <dt>User</dt>
+            <dd class="user">
+                <ul>
+                    <li><!-- user sorted by score --></li>
+                </ul>
+            </dd>
+            <dt>Score</dt>
+            <dd class="score">
+                <ul>
+                    <li><!-- score corresponding to user --></li>
+                </ul>
+            </dd>
+        </dl>
+    </aside>
+    <article class="container" id="gameContainer">
         <!-- ng-repeat is a looping structure -->
         <div class="row" ng-repeat="row in board">
             <!-- setClass(square) will be the function that changes any of the squares, i.e: adding/removing a chip on the square -->
@@ -18,24 +55,19 @@
                 <div ng-style="setStyling(square)" class="circle"> </div>
             </div>
         </div>
-    </div>
-    <br>
-    <div class="container text-center alert">
-        <div>
-            <h2>Player : {{player}}</h2>
-        </div>
-        <div>Red Score : {{redScore}}</div>
-        <div>Black Score : {{blackScore}}</div>
+    </article>
+    <aside class="right container text-center alert">
+        <h2>User : {{user}}</h2>
+        <span>Score : {{score}}</span>
         <br>
         <button id="startGame" type="button" ng-click="newGame()" class="btn">Reset Game</button>
-    </div>
-    <script src="angular.min.js"></script>
-    <script src="ngCheckers.js"></script>
-    <footer>
-        <div class="text-center p-2">
-            <h3>© 2021 Copyright: FA 21 IST 256 - TEAM B</h3>
-            <h3>David - Rouven - Luke - Tony - Michelle - Paulina - Jaydevsinh - Sebastian</h3>
-        </div>
-    </footer>
+    </aside>
+</section>
+<footer class="container text-center p-2">
+    <h3>&copy; 2021 Copyright: FA 21 IST 256 - TEAM B</h3>
+    <h3>David - Rouven - Luke - Tony - Michelle - Paulina - Jaydevsinh - Sebastian</h3>
+</footer>
+<script src="angular.min.js"></script>
+<script src="ngCheckers.js"></script>
 </body>
 </html>

@@ -30,6 +30,7 @@ angular.module("ngCheckers", [])
       $scope.player = RED;
       $scope.redScore = 0;
       $scope.blackScore = 0;
+      $scope.score = 0;
 
       $scope.board = [];
       for (var i = 0; i < BOARD_WIDTH; i++) {
