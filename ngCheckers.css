@@ -2,35 +2,23 @@
 /*                                 Design of the Checkerboard                                 */
 /* ------------------------------------------------------------------------------------------ */
 #gameContainer {
-    background-color: black;
-    width: 480px;
-    height: 480px;
-    padding: 20px;
+    border: 1vw solid black;
 }
 
-*{
-font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', 'serif';
-}
-/* Use all 480pxs of the row */
 .row {
-    width: 100%
+
 }
 
 /* When squares are generated, they are floating to their left */
 .square {
     float: left;
-    width: 60px;
-    height: 60px;
+    width: 12.5%;
+    padding: 1.25%;
 }
 
 .circle {
     border-radius: 50%;
-    width: 94%;
-    height: 94%;
-    margin: 3%;
-    color: black;
-    text-align: center;
-    line-height: 56px;
+    padding-top: 100%;
 }
 
 /* When the mouse is hovering the square, it changes */
@@ -55,7 +43,7 @@ font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roma
 
 
 /* HTML design layout */
-.container{
+/*.container{
   width: 35%;
   padding-right: 15px;
   padding-left: 15px;
@@ -63,7 +51,7 @@ font-family: Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roma
   margin-left: auto;
     box-shadow: 4px 4px 8px #000000;
     
-}
+}*/
 
 .text-center {
   text-align: center !important;

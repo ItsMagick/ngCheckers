@@ -1,0 +1,34 @@
+header, nav, aside, footer {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 1rem;
+}
+
+header {
+    margin-top: 2%;
+}
+
+nav {
+    display: none;
+}
+
+section {
+    margin-top: 2%;
+}
+
+article {
+    width: 45%;
+    margin: auto;
+}
+
+aside {
+    width: 25%;
+    margin: 0;
+}
+
+footer {
+    margin: 2%;
+}
+
+footer > * {
+    display: inline-block;
+}

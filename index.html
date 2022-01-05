@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <title>Checkers</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="layout.css">
     <link rel="stylesheet" type="text/css" href="ngCheckers.css">
 </head>
 <body ng-controller="checkersCtrl">
-<header class="container jumbotron text-center">
+<header class="container text-center">
     <h1>Dame - das Spiel</h1>
 </header>
 <nav class="container">
@@ -21,51 +22,52 @@
     </form>
 </nav>
 <section class="container">
-    <aside class="left container">
-        <dl class="highscore">
-            <dt>Place</dt>
-            <dd class="place">
-                <ul>
-                    <li>1.</li>
-                    <li>2.</li>
-                    <li>3.</li>
-                    <li><!-- place corresponding to user --></li>
-                </ul>
-            </dd>
-            <dt>User</dt>
-            <dd class="user">
-                <ul>
-                    <li><!-- user sorted by score --></li>
-                </ul>
-            </dd>
-            <dt>Score</dt>
-            <dd class="score">
-                <ul>
-                    <li><!-- score corresponding to user --></li>
-                </ul>
-            </dd>
-        </dl>
-    </aside>
-    <article class="container" id="gameContainer">
-        <!-- ng-repeat is a looping structure -->
-        <div class="row" ng-repeat="row in board">
-            <!-- setClass(square) will be the function that changes any of the squares, i.e: adding/removing a chip on the square -->
-            <!-- select(square) will be the prompt when the user clicks a square and activates setClass(square) -->
-            <div class="square" ng-style="setClass(square)" ng-repeat="square in row track by $index" ng-click="select(square)">
-                <div ng-style="setStyling(square)" class="circle"> </div>
+    <div class="row">
+        <aside class="col-3">
+            <dl class="text-center highscore">
+                <dt>Place</dt>
+                <dd class="place">
+                    <ul>
+                        <li>1.</li>
+                        <li>2.</li>
+                        <li>3.</li>
+                        <li><!-- place corresponding to user --></li>
+                    </ul>
+                </dd>
+                <dt>User</dt>
+                <dd class="user">
+                    <ul>
+                        <li><!-- user sorted by score --></li>
+                    </ul>
+                </dd>
+                <dt>Score</dt>
+                <dd class="score">
+                    <ul>
+                        <li><!-- score corresponding to user --></li>
+                    </ul>
+                </dd>
+            </dl>
+        </aside>
+        <article id="gameContainer" class="col-5">
+            <!-- ng-repeat is a looping structure -->
+            <div class="row" ng-repeat="row in board">
+                <!-- setClass(square) will be the function that changes any of the squares, i.e: adding/removing a chip on the square -->
+                <!-- select(square) will be the prompt when the user clicks a square and activates setClass(square) -->
+                <div class="square" ng-style="setClass(square)" ng-repeat="square in row track by $index" ng-click="select(square)">
+                    <div ng-style="setStyling(square)" class="circle"> </div>
+                </div>
             </div>
-        </div>
-    </article>
-    <aside class="right container text-center alert">
-        <h2>User : {{user}}</h2>
-        <span>Score : {{score}}</span>
-        <br>
-        <button id="startGame" type="button" ng-click="newGame()" class="btn">Reset Game</button>
-    </aside>
+        </article>
+        <aside class="col-3 text-center">
+            <h2>User : {{user}}</h2>
+            <span>Score : {{score}}</span>
+            <br>
+            <button id="startGame" type="button" ng-click="newGame()" class="btn">Reset Game</button>
+        </aside>
+    </div>
 </section>
-<footer class="container text-center p-2">
-    <h3>&copy; 2021 Copyright: FA 21 IST 256 - TEAM B</h3>
-    <h3>David - Rouven - Luke - Tony - Michelle - Paulina - Jaydevsinh - Sebastian</h3>
+<footer class="container text-center">
+    <p>&copy; 2021 Copyright: FA 21 IST 256 - TEAM B (David, Jaydevsinh, Luke, Michelle, Paulina, Rouven, Sebastian, Tony)</p>
 </footer>
 <script src="angular.min.js"></script>
 <script src="ngCheckers.js"></script>
