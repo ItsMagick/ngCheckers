@@ -129,23 +129,46 @@ angular.module("ngCheckers", [])
     function movePiece(square){
         if (square.isChoice) {
             var becomeKing = selectedSquare.isKing;
-            
-            for (var i = 0; i< square.matados.length; i++){
+
+            for (var i = 0; i < square.matados.length; i++) {
                 var matado = square.matados[i];
                 hopPiece(matado);
                 //becomeKing = becomeKing || becomeKingAfterJump(matado.x, matado.y);
-			
+
             }
-        square.player = selectedSquare.player;
-        square.isKing = becomeKing || isKing(square);
-        
-        selectedSquare.player = null;
-        selectedSquare.isKing = false;
-        
-        // Check to see if the player is RED. If it was, turn to BLACK's turn.
-        $scope.player = $scope.player === RED ? BLACK : RED;
+            square.player = selectedSquare.player;
+            square.isKing = becomeKing || isKing(square);
+
+            selectedSquare.player = null;
+            selectedSquare.isKing = false;
+
+            // Check to see if the player is RED. If it was, turn to BLACK's turn.
+            $scope.player = $scope.player === RED ? BLACK : RED;
+/*
+            if ($scope.player === BLACK) {
+                for (var i = 0; i < BOARD_WIDTH; i++) {
+                    for (var j = 0; j < BOARD_WIDTH; j++) {
+                        if (square.player === $scope.player) {
+                            $scope.select($scope.player);
+                            if ($scope.board[i + 1][j + 1] === null) {
+
+                                movePiece($scope.board[i + 1][j + 1]);
+                                $scope.player = $scope.player === BLACK ? RED : BLACK;
+                            } else {
+
+                                movePiece($scope.board[i - 1][j + 1]);
+                                $scope.player = $scope.player === BLACK ? RED : BLACK;
+
+                            }
+                        }
+                    }
+                }
+            }
+
+ */
         }
     }
+
 
     function resetChoices() {
         // Un-highlights everything
