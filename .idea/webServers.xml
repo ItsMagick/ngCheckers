@@ -2,15 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="75ba890b-36d9-40c4-85f2-20dd21374277" name="webdev">
-        <fileTransfer accessType="SFTP" host="jh-webdev1.netlab.hof-university.de" port="22" sshConfigId="76a68526-0519-4b64-b0e0-20651e5f5618" sshConfig="webdev">
-          <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
-          </advancedOptions>
-        </fileTransfer>
-      </webServer>
-      <webServer id="34e2462b-71ee-4655-a176-af0e30a10733" name="jh-webdev1.netlab.hof-university.de">
-        <fileTransfer rootFolder="/home/speschke" accessType="SFTP" host="jh-webdev1.netlab.hof-university.de" port="22" sshConfigId="76a68526-0519-4b64-b0e0-20651e5f5618" sshConfig="webdev">
+      <webServer id="34e2462b-71ee-4655-a176-af0e30a10733" name="jh-webdev1.netlab.hof-university.de" url="http://team-b.jh-webdev1.netlab.hof-university.de/">
+        <fileTransfer rootFolder="/home/rweil" accessType="SFTP" host="jh-webdev1.netlab.hof-university.de" port="22" sshConfigId="76a68526-0519-4b64-b0e0-20651e5f5618" sshConfig="webdev">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

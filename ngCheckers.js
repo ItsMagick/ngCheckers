@@ -57,9 +57,9 @@ angular.module("ngCheckers", [])
 
     $scope.setStyling = function (square) {
         var pawnRED = "#FF0000",
-            pawnBLACK = "#4b4956",
-            kingRED = "#Ff7979",
-            kingBLACK = "#837f96";
+            pawnBLACK = "#000",
+            kingRED = "#FF4444",
+            kingBLACK = "#444";
         // Red checker pieces
       if (square.player === RED)
           // If the chip became king, it will change to a different color.
@@ -72,8 +72,8 @@ angular.module("ngCheckers", [])
     }
 
     $scope.setClass = function (square) {
-        var softBlack = '#272324',
-            softRed = '#cc192f';
+        var softBlack = 'rgba(0, 0, 0, 0.5)',
+            softRed = 'rgba(0, 0, 0, 0)';
       if (square.y % 2 === 0) {
         // Even rows (0, 2, 4, 6, 8)
         if (square.x % 2 === 0) {

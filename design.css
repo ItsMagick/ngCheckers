@@ -1,0 +1,83 @@
+/* ------------------------------------------------------------------------------------------ */
+/*                                 Design of the Checkerboard                                 */
+/* ------------------------------------------------------------------------------------------ */
+
+* {
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: --bs-font-sans-serif, sans-serif;
+    color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, dt {
+    padding: 1rem;
+}
+
+body {
+    background-image: url("Images/background.jpg");
+    background-size: cover;
+}
+
+header, nav, aside, footer {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+}
+
+#gameContainer {
+    border: 1vw solid black;
+}
+
+.square:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
+#startGame {
+    width: 120px;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+}
+
+#startGame:hover {
+    background-color: yellow;
+	color: black;
+    cursor: pointer;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    color: white;
+}
+h3 {
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    color: #fff;
+    background-color: #cc192f;
+    border-color: #cc192f;
+    width: 100%;
+}
+
+footer > p {
+
+}
