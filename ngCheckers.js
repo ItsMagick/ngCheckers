@@ -72,8 +72,8 @@ angular.module("ngCheckers", [])
     }
 
     $scope.setClass = function (square) {
-        var softBlack = 'rgba(0, 0, 0, 0.5)',
-            softRed = 'rgba(0, 0, 0, 0)';
+        var softBlack = '#00000088',
+            softRed = '#FF000000';
       if (square.y % 2 === 0) {
         // Even rows (0, 2, 4, 6, 8)
         if (square.x % 2 === 0) {
