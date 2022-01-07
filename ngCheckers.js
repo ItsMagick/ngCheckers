@@ -55,6 +55,10 @@ angular.module("ngCheckers", [])
     // Initiate the function
     $scope.newGame();
 
+    $scope.saveScore = function(){
+        this.http.post('checkersAPI.php', {name: "something", score: $scope.score})
+    }
+
     $scope.setStyling = function (square) {
         var pawnRED = "#FF0000",
             pawnBLACK = "#000",
