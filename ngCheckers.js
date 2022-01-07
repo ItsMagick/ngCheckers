@@ -66,8 +66,8 @@ angular.module("ngCheckers", [])
         })
     }
       $scope.getScore = function() {
-        //json encoded obj
-          fetch('checkersAPI.php').then(data=> console.log(data)
+        //json encoded obj body
+          fetch('checkersAPI.php').then(response => response.json()).then(data=> console.log(data)
           );
       }
 
