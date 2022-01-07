@@ -61,9 +61,8 @@ angular.module("ngCheckers", [])
         fetch('checkersAPI.php', {
             method: 'POST', // or 'PUT'
             headers: {
-                'Content-Type': 'application/json',
             },
-            body: JSON.stringify(data),
+            body: data,
         })
     }
 
