@@ -61,8 +61,9 @@ angular.module("ngCheckers", [])
         fetch('checkersAPI.php', {
             method: 'POST', // or 'PUT'
             headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
             },
-            body: data,
+            body: "name=somethingnice&score="+$scope.score
         })
     }
 
