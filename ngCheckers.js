@@ -66,12 +66,11 @@ angular.module("ngCheckers", [])
             body: "name=somethingnice&score="+$scope.score
         })
     }
-      $scope.getScore = function() {
+    $scope.getScore = function() {
         //json encoded obj body
-          fetch('checkersAPI.php').then(response => response.json()).then(data=> $scope.places = data
-          );
-      }
-      setTimeout($scope.getScore, 3000);
+        fetch('checkersAPI.php').then(response => response.json()).then(data=> $scope.places = data);
+    }
+      setTimeout(function(){$scope.getScore();},3000)
 
 
     $scope.setStyling = function (square) {
