@@ -56,7 +56,15 @@ angular.module("ngCheckers", [])
     $scope.newGame();
 
     $scope.saveScore = function(){
-        this.http.post('checkersAPI.php', {name: "something", score: $scope.score})
+        const data = {name: "something nice", score: $scope.score};
+
+        fetch('checkersAPI.php', {
+            method: 'POST', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
     }
 
     $scope.setStyling = function (square) {
