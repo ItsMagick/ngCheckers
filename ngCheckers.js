@@ -70,7 +70,8 @@ angular.module("ngCheckers", [])
         //json encoded obj body
         fetch('checkersAPI.php').then(response => response.json()).then(data=> $scope.places = data);
     }
-      setTimeout(function (){document.getElementById("getScore").click()}, 3000)
+        //instead of this crap just get the mouseclick interaction from enter name popup
+     // setTimeout(function (){document.getElementById("getScore").click()}, 3000)
 
 
     $scope.setStyling = function (square) {
