@@ -27,9 +27,9 @@
             <dl class="text-center highscore">
                 <dt>Place</dt>
                 <dd class="place">
-                    <ul>
-                        <li ng-repeat="place in places">{{place.name}}{{place.score}}       </li>
-                    </ul>
+                    <ol>
+                        <li ng-repeat="place in places">{{place.name}}: {{place.score}}       </li>
+                    </ol>
                 </dd>
                 <dt>User</dt>
                 <dd class="user">
