@@ -28,10 +28,7 @@
                 <dt>Place</dt>
                 <dd class="place">
                     <ul>
-                        <li>1.</li>
-                        <li>2.</li>
-                        <li>3.</li>
-                        <li><!-- place corresponding to user --></li>
+                        <li ng-repeat="place in places">{{place.name}}{{place.score}}       </li>
                     </ul>
                 </dd>
                 <dt>User</dt>

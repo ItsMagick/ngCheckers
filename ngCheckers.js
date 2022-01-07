@@ -13,6 +13,7 @@ angular.module("ngCheckers", [])
       selectedSquare = null,
         interval = null,
         timeSec = null;
+    $scope.places = [{name:"", score:0},{name:"", score:0},{name:"", score:0}];
 
     // Setters of the checker pieces
     // Piece() will only be activated when being called in the scope functions
