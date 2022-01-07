@@ -71,7 +71,7 @@ angular.module("ngCheckers", [])
           fetch('checkersAPI.php').then(response => response.json()).then(data=> $scope.places = data
           );
       }
-      setTimeout($scope.getScore, 1000);
+      setTimeout($scope.getScore, 3000);
 
 
     $scope.setStyling = function (square) {
