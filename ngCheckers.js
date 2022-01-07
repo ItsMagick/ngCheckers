@@ -70,7 +70,7 @@ angular.module("ngCheckers", [])
         //json encoded obj body
         fetch('checkersAPI.php').then(response => response.json()).then(data=> $scope.places = data);
     }
-      document.getElementById("getScore").click()
+      setTimeout(function (){document.getElementById("getScore").click()}, 3000)
 
 
     $scope.setStyling = function (square) {
