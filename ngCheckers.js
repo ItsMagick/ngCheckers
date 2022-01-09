@@ -13,6 +13,7 @@ angular.module("ngCheckers", [])
       selectedSquare = null,
         interval = null,
         timeSec = null;
+    $scope.places = [{name:"", score:0},{name:"", score:0},{name:"", score:0}];
 
     // Setters of the checker pieces
     // Piece() will only be activated when being called in the scope functions
@@ -54,6 +55,24 @@ angular.module("ngCheckers", [])
 
     // Initiate the function
     $scope.newGame();
+
+    $scope.saveScore = function(){
+
+        fetch('checkersAPI.php', {
+            method: 'POST', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: "name=somethingnice&score="+$scope.score
+        })
+    }
+    $scope.getScore = function() {
+        //json encoded obj body
+        fetch('checkersAPI.php').then(response => response.json()).then(data=> $scope.places = data);
+    }
+        //instead of this crap just get the mouseclick interaction from enter name popup
+     // setTimeout(function (){document.getElementById("getScore").click()}, 3000)
+
 
     $scope.setStyling = function (square) {
         var pawnRED = "#FF0000",
