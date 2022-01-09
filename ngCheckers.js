@@ -13,7 +13,7 @@ angular.module("ngCheckers", [])
       selectedSquare = null,
         interval = null,
         timeSec = null,
-        username = "unnkown";
+        username = undefined;
     $scope.places = [{name:"", score:0},{name:"", score:0},{name:"", score:0}];
 
     // Setters of the checker pieces
@@ -40,8 +40,20 @@ angular.module("ngCheckers", [])
 
       openForm();
 
-          // Reseting the board
-    $scope.newGame = function () {
+      $scope.setUsername = function() {
+          username = $scope.username.trim();
+          if(username != null || username !== undefined) {
+              if(username === "") {
+                  username = "Player";
+              }
+          } else {
+              document.reload();
+          }
+          $scope.user = username;
+      }
+
+      // Reseting the board
+      $scope.newGame = function () {
       $scope.player = RED;
       $scope.redScore = 0;
       $scope.blackScore = 0;
@@ -70,10 +82,6 @@ angular.module("ngCheckers", [])
     // Initiate the function
     $scope.newGame();
 
-    $scope.setUsername = function() {
-        
-    }
-
     $scope.saveScore = function() {
 
         fetch('checkersAPI.php', {
@@ -87,6 +95,7 @@ angular.module("ngCheckers", [])
     $scope.getScore = function() {
         //json encoded obj body
         fetch('checkersAPI.php').then(response => response.json()).then(data=> $scope.places = data);
+        console.log("asdf");
     }
         //instead of this crap just get the mouseclick interaction from enter name popup
      // setTimeout(function (){document.getElementById("getScore").click()}, 3000)

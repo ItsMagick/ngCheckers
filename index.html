@@ -18,13 +18,13 @@
                 <p>Please enter your username if you want to save your score.<br />
                     In case you want to stay anonymous then submit a blank field.<br />
                     The name &quot;Player&quot; is for anonymous Users only.</p>
-                <form class="registration">
+                <form ng-submit="setUsername() getScore()">
                     <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" placeholder="Player">
+                    <input type="text" id="username" name="username" placeholder="Player" ng-model="username">
                     <!-- <br/>
                     <label for="password">Password:</label>
                     <input type="text" id="password" name="password" placeholder="Password"> -->
-                    <input type="submit" value="Submit" ng-click="setUsername()" onclick="function closeForm() {
+                    <input type="submit" value="Submit" onclick="function closeForm() {
                         document.getElementById('popup').style.display = 'none';
                         document.getElementById('content').style.display = 'block';
                     }
