@@ -12,8 +12,8 @@ angular.module("ngCheckers", [])
       BOARD_WIDTH = 8,
       selectedSquare = null,
         interval = null,
-        timeSec = null;
-    $scope.user = window.prompt("If you want to save your score, then please enter your username:");
+        timeSec = null,
+        username = "unnkown";
     $scope.places = [{name:"", score:0},{name:"", score:0},{name:"", score:0}];
 
     // Setters of the checker pieces
@@ -27,7 +27,20 @@ angular.module("ngCheckers", [])
       this.matados = [];
     }
 
-    // Reseting the board
+    // Setting a Username
+      function openForm() {
+        document.getElementById("content").style.display = "none";
+        document.getElementById("popup").style.display = "block";
+      }
+
+      function closeForm() {
+        document.getElementById("popup").style.display = "none";
+        document.getElementById("content").style.display = "block";
+      }
+
+      openForm();
+
+          // Reseting the board
     $scope.newGame = function () {
       $scope.player = RED;
       $scope.redScore = 0;
@@ -57,7 +70,11 @@ angular.module("ngCheckers", [])
     // Initiate the function
     $scope.newGame();
 
-    $scope.saveScore = function(){
+    $scope.setUsername = function() {
+        
+    }
+
+    $scope.saveScore = function() {
 
         fetch('checkersAPI.php', {
             method: 'POST', // or 'PUT'
@@ -125,7 +142,7 @@ angular.module("ngCheckers", [])
 
     // When a square is being clicked
     $scope.select = function(square) {
-        if(timeSec == 0){
+        if(timeSec === 0){
             startTimer();
         }
 
@@ -234,7 +251,7 @@ angular.module("ngCheckers", [])
         isKing =
             isKing ||
             ($scope.player === RED && y === 0) ||
-            ($scope.player === BLACK && y == BOARD_WIDTH - 1);
+            ($scope.player === BLACK && y === BOARD_WIDTH - 1);
         
         
 //        ------------------------------------------------
@@ -365,12 +382,12 @@ angular.module("ngCheckers", [])
 	function gameOver(){
         // Game is over when one of the players has gotten 12 points
         // They are only 12 pieces for each player
-		if($scope.redScore == 12)
+		if($scope.redScore === 12)
 			{
-				alert("RED PLAYER WINS!!");
+				alert("{{user}} WINS!!");
 				$scope.newGame();
 			}
-		else if($scope.blackScore == 12)
+		else if($scope.blackScore === 12)
 			{
 				alert("BLACK PLAYER WINS!!");
 				$scope.newGame();

@@ -33,6 +33,34 @@ h2 {
     margin-bottom: 5%;
 }
 
+h3 {
+    padding-top: 2.5%;
+}
+
+form {
+    padding-top: 1%;
+    padding-bottom: 2.5%;
+}
+
+input[type="text"] {
+    color: #000;
+}
+
+input[type="submit"] {
+    border: 1px solid #FF0000;
+    border-radius: 0.5rem;
+    user-select: none;
+    background-color: #FF0000;
+    color: #fff;
+}
+
+input[type="submit"]:hover {
+    background-color: #FFFF00;
+    color: #000;
+    cursor: pointer;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
 #gameContainer {
     border: 1vw solid #000;
 }
