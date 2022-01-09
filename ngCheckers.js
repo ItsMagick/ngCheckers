@@ -13,6 +13,7 @@ angular.module("ngCheckers", [])
       selectedSquare = null,
         interval = null,
         timeSec = null;
+    $scope.user = window.prompt("If you want to save your score, then please enter your username:");
     $scope.places = [{name:"", score:0},{name:"", score:0},{name:"", score:0}];
 
     // Setters of the checker pieces
