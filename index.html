@@ -15,9 +15,6 @@
     <form class="registration">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" placeholder="Username">
-        <!--<br/>
-        <label for="password">Password:</label>
-        <input type="text" id="password" name="password" placeholder="Password">-->
         <input type="submit" value="Submit">
     </form>
 </nav>
@@ -29,10 +26,20 @@
                 <dt class="place">Place</dt>
                 <dt class="user">Player</dt>
                 <dt class="score">Score</dt>
-                <dd>
+                <dd class="place">
                     <ol>
-                        <li ng-repeat="place in places">{{place.name}}: {{place.score}}</li>
+                        <li ng-repeat="place in places"></li>
                     </ol>
+                </dd>
+                <dd class="user">
+                    <ul>
+                        <li ng-repeat="place in places">{{place.name}}</li>
+                    </ul>
+                </dd>
+                <dd class="score">
+                    <ul>
+                        <li ng-repeat="place in places">{{place.score}}</li>
+                    </ul>
                 </dd>
             </dl>
             <h2>Current Score: {{score}}</h2>

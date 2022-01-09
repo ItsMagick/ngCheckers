@@ -42,10 +42,10 @@ h2 {
     opacity: .8;
 }
 
-ul, ol, dl, li, dt, dd {
-    list-style: none;
+ul, dl, dt, dd {
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
 dl {
@@ -59,16 +59,12 @@ dt, dd {
     float: left;
 }
 
-.place {
+.place, .score{
     width: calc(100% / 6);
 }
 
 .user {
     width: calc(100% / 3 * 2);
-}
-
-.score {
-    width: calc(100% / 6);
 }
 
 .btn {
