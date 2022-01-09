@@ -13,8 +13,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 body {
-    display:flex;
-    flex-direction:column;
+    display:initial;
 }
 
 header, section, footer {
