@@ -23,30 +23,41 @@
 </nav>
 <section class="container">
     <div class="row">
-        <aside class="col-3">
+        <aside class="col-3 text-center">
+            <h2>Highscore</h2>
             <dl class="text-center highscore">
-                <dt>Place</dt>
+                <dt class="place">Place</dt>
+                <dt class="user">Player</dt>
+                <dt class="score">Score</dt>
                 <dd class="place">
                     <ul>
                         <li>1.</li>
                         <li>2.</li>
                         <li>3.</li>
-                        <li><!-- place corresponding to user --></li>
+                        <li>4.</li>
+                        <li>5.</li>
                     </ul>
                 </dd>
-                <dt>User</dt>
                 <dd class="user">
                     <ul>
-                        <li><!-- user sorted by score --></li>
+                        <li>NrOne</li>
+                        <li>NrTwo</li>
+                        <li>NrThree</li>
+                        <li>NrFour</li>
+                        <li>NrFive</li>
                     </ul>
                 </dd>
-                <dt>Score</dt>
                 <dd class="score">
                     <ul>
-                        <li><!-- score corresponding to user --></li>
+                        <li>999</li>
+                        <li>888</li>
+                        <li>777</li>
+                        <li>666</li>
+                        <li>555</li>
                     </ul>
                 </dd>
             </dl>
+            <h2>Current Score: {{score}}</h2>
         </aside>
         <article class="col-6">
             <div id="gameContainer" class="container">
@@ -61,8 +72,9 @@
             </div>
         </article>
         <aside class="col-3 text-center">
-            <h2>Player : {{user}}</h2>
-            <span>Score : {{score}}</span>
+            <h2>Player : Red</h2> <!-- {{user}} statt Player -->
+            <p>Black Pieces Taken : {{blackScore}}</p>
+            <p>Red Pieces Taken : {{redScore}}</p>
             <br>
             <button id="startGame" type="button" ng-click="newGame()" class="btn">Reset Game</button>
         </aside>

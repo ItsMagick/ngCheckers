@@ -8,6 +8,16 @@
     color: #fff;
 }
 
+body {
+    background-image: url("Images/background.jpg");
+    background-size: cover;
+}
+
+header, nav, aside, footer {
+    background: #00000088;
+    border-radius: 1rem;
+}
+
 h1, h2, h3, h4, h5, h6, p, span, dt {
     padding: 1%;
     margin: 0;
@@ -20,16 +30,7 @@ h1 {
 
 h2 {
     margin-top: 25%;
-}
-
-body {
-    background-image: url("Images/background.jpg");
-    background-size: cover;
-}
-
-header, nav, aside, footer {
-    background: #00000088;
-    border-radius: 1rem;
+    margin-bottom: 5%;
 }
 
 #gameContainer {
@@ -41,16 +42,33 @@ header, nav, aside, footer {
     opacity: .8;
 }
 
-#startGame {
-    background-color: #FF0000;
-    color: #fff;
+ul, ol, dl, li, dt, dd {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-#startGame:hover {
-    background-color: #FFFF00;
-	color: #000;
-    cursor: pointer;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+dl {
+    display: flow-root;
+    width: 100%;
+    padding: 0 5%;
+    clear: both;
+}
+
+dt, dd {
+    float: left;
+}
+
+.place {
+    width: calc(100% / 6);
+}
+
+.user {
+    width: calc(100% / 3 * 2);
+}
+
+.score {
+    width: calc(100% / 6);
 }
 
 .btn {
@@ -60,4 +78,13 @@ header, nav, aside, footer {
     border-radius: 0.5rem;
     margin-top: 25%;
     user-select: none;
+    background-color: #FF0000;
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: #FFFF00;
+    color: #000;
+    cursor: pointer;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
 }
