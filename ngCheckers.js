@@ -28,28 +28,17 @@ angular.module("ngCheckers", [])
     }
 
     // Setting a Username
-      function openForm() {
-        document.getElementById("content").style.display = "none";
-        document.getElementById("popup").style.display = "block";
-      }
-
-      function closeForm() {
-        document.getElementById("popup").style.display = "none";
-        document.getElementById("content").style.display = "block";
-      }
-
-      openForm();
+      document.getElementById("content").style.display = "none";
+      document.getElementById("popup").style.display = "block";
 
       $scope.setUsername = function() {
           username = $scope.username.trim();
-          if(username != null || username !== undefined) {
-              if(username === "") {
-                  username = "Player";
-              }
-          } else {
-              document.reload();
+          if(username === "") {
+              username = "Player";
           }
           $scope.user = username;
+          document.getElementById("popup").style.display = "none";
+          document.getElementById("content").style.display = "block";
       }
 
       // Reseting the board

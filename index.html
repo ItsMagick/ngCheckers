@@ -20,15 +20,11 @@
                     The name &quot;Player&quot; is for anonymous Users only.</p>
                 <form ng-submit="setUsername() getScore()">
                     <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" placeholder="Player" ng-model="username">
+                    <input type="text" id="username" name="username" placeholder="Player" ng-model="username" />
                     <!-- <br/>
                     <label for="password">Password:</label>
                     <input type="text" id="password" name="password" placeholder="Password"> -->
-                    <input type="submit" value="Submit" onclick="function closeForm() {
-                        document.getElementById('popup').style.display = 'none';
-                        document.getElementById('content').style.display = 'block';
-                    }
-                    closeForm();">
+                    <input type="submit" value="Submit" />
                 </form>
             </nav>
         </section>
