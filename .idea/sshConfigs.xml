@@ -2,10 +2,10 @@
 <project version="4">
   <component name="SshConfigs">
     <configs>
-      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="jh-webdev1.netlab.hof-university.de" id="76a68526-0519-4b64-b0e0-20651e5f5618" port="22" customName="webdev" nameFormat="CUSTOM" username="rweil">
+      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="jh-webdev1.netlab.hof-university.de" id="76a68526-0519-4b64-b0e0-20651e5f5618" port="22" customName="webdev" nameFormat="CUSTOM" username="speschke">
         <option name="customName" value="webdev" />
       </sshConfig>
-      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" id="3fb6759e-b0e4-49ba-bb87-671f868602d0" customName="WebDev" nameFormat="CUSTOM" useOpenSSHConfig="true">
+      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" id="3fb6759e-b0e4-49ba-bb87-671f868602d0" customName="WebDev" nameFormat="CUSTOM">
         <option name="customName" value="WebDev" />
       </sshConfig>
     </configs>

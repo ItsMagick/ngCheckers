@@ -17,7 +17,7 @@
                 <h3>Username</h3>
                 <p>Please enter your username if you want to save your score.<br />
                     In case you want to stay anonymous then leave &quot;Player&quot; as your name.</p>
-                <form ng-submit="setUsername()">
+                <form ng-submit="submitAndFetch()">
                     <label for="username">Username:</label>
                     <input type="text" id="username" value="Player" maxlength="10" minlength="2" ng-model="username" />
                     <!-- <br/>
