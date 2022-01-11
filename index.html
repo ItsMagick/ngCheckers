@@ -16,11 +16,10 @@
             <nav id="popupForm">
                 <h3>Username</h3>
                 <p>Please enter your username if you want to save your score.<br />
-                    In case you want to stay anonymous then submit a blank field.<br />
-                    The name &quot;Player&quot; is for anonymous Users only.</p>
-                <form ng-submit="setUsername() getScore()">
+                    In case you want to stay anonymous then leave &quot;Player&quot; as your name.</p>
+                <form ng-submit="setUsername()">
                     <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" placeholder="Player" ng-model="username" />
+                    <input type="text" id="username" value="Player" maxlength="10" minlength="2" ng-model="username" />
                     <!-- <br/>
                     <label for="password">Password:</label>
                     <input type="text" id="password" name="password" placeholder="Password"> -->
@@ -58,7 +57,7 @@
                     <div id="gameContainer" class="container">
                         <div class="row" ng-repeat="row in board">
                             <div class="square" ng-style="setClass(square)" ng-repeat="square in row track by $index" ng-click="select(square)">
-                                <div ng-style="setStyling(square)" class="circle"> </div>
+                                <div class="circle" ng-style="setStyling(square)"> </div>
                             </div>
                         </div>
                     </div>

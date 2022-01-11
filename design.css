@@ -18,6 +18,10 @@ header, nav, aside, footer {
     border-radius: 1rem;
 }
 
+#content {
+    display: none;
+}
+
 h1, h2, h3, h4, h5, h6, p, span, dt {
     padding: 1%;
     margin: 0;

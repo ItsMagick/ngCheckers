@@ -28,12 +28,9 @@ angular.module("ngCheckers", [])
     }
 
     // Setting a Username
-      document.getElementById("content").style.display = "none";
-      document.getElementById("popup").style.display = "block";
-
       $scope.setUsername = function() {
           username = $scope.username.trim();
-          if(username === "") {
+          if(username == null || username === "") {
               username = "Player";
           }
           $scope.user = username;
