@@ -27,10 +27,12 @@ angular.module("ngCheckers", [])
       this.matados = [];
     }
 
-    $scope.submitAndFetch = function(){
+    document.getElementById('Submit').addEventListener('click', function(){
         $scope.setUsername();
-        $scop.getScore();
-    }
+        $scope.getScore();
+        
+    })
+
 
     // Setting a Username
       $scope.setUsername = function() {
